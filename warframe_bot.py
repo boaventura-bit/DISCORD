@@ -1,9 +1,11 @@
 import discord
 import requests
 import asyncio
+import os
 
-TOKEN = "MTM0NjY2MzkxOTg5MjE3Mjg0MQ.G-nm-J.Y0YV9DpfFLAKdeA5ZEOUpSwHBdV0xMV84EiLao"
-CHANNEL_ID = 1346641887729156126
+
+TOKEN = os.getenv("TOKEN")
+CHANNEL_ID = int(os.getenv("CHANNEL_ID"))
 
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
